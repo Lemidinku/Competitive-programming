@@ -1,0 +1,16 @@
+class Solution(object):
+    def sortSentence(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        l = s.split(" ")
+        lis = [x for x in range(len(l))]
+        for x in s.split(" "):
+          lis[int(x[-1])-1] =  x[:-1]
+
+        sent = ""
+        for st in lis[:-1]:
+          sent += st + " "
+        sent += lis[-1]
+        return sent
