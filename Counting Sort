@@ -1,0 +1,7 @@
+def countingSort(arr):
+    # Write your code here
+    n = max(arr)
+    lis = [0 for a in range(n+1)]
+    for x in arr:
+        lis[x] += 1
+    return lis
