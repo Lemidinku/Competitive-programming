@@ -1,0 +1,12 @@
+def gradingStudents(grades):
+    # Write your code here
+    lis = []
+    for grade in grades:
+        if grade >= 38:
+            
+            close_num = (int(grade/5) + 1)*5
+            diff = close_num - grade
+            if  diff<3:
+                grade += diff
+        lis.append(grade)
+    return lis
