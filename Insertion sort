@@ -1,0 +1,13 @@
+def insertionSort1(n, arr):
+    # Write your code here
+   
+    num = arr[-1]
+
+    for i in range(n-1, -1, -1):
+        if arr[i-1] >= num and i > 0:
+            arr[i] = arr[i-1]
+            print(' '.join(str(x) for x in arr))
+        else:
+            arr[i] = num
+            print(' '.join(str(x) for x in arr))
+            break
