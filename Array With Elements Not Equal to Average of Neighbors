@@ -1,0 +1,11 @@
+class Solution:
+    def rearrangeArray(self, nums: List[int]) -> List[int]:
+        a = 1
+        while a < len(nums)-1:
+            if nums[a] == (nums[a+1]+ nums[a-1])/2:
+                nums[a], nums[a+1] = nums[a+1], nums[a]
+            
+                if a>1: a-=1
+            else:
+                a+=1
+        return nums
