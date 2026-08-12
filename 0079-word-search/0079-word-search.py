@@ -24,9 +24,8 @@ class Solution:
             return found
 
         
-        found = False
         for r in range(m):
             for c in range(n):
-                if word[0] == board[r][c]:
-                    found |= search(0, r,c, set())
-        return found
+                if word[0] == board[r][c] and search(0, r,c, set()):
+                    return True
+        return False
