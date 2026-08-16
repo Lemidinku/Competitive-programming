@@ -6,10 +6,7 @@ class Solution:
         for left,right  in intervals:
             prev_left, prev_right = new_intervals[-1]
             if max(left, prev_left) <= min(right, prev_right):
-                new_left = min(left,prev_left)
-                new_right = max(right, prev_right)
-                new_intervals.pop()
-                new_intervals.append([new_left,new_right])
+                new_intervals[-1][1] = max(right, prev_right)
             else:
                 new_intervals.append([left,right])
         return new_intervals
